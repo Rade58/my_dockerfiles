@@ -22,4 +22,5 @@ RUN curl https://raw.githubusercontent.com/riobard/bash-powerline/master/bash-po
 
 USER root
 
-CMD ["bash", "-c", "eval $(ssh-agent -s) && exec bash"]
+# CMD ["bash", "-c", "eval $(ssh-agent -s) && exec bash"]
+CMD ["bash"]
