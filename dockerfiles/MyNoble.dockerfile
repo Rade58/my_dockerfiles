@@ -17,4 +17,7 @@ RUN mkdir -p .ssh test
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash && \
   bash -c "source ~/.nvm/nvm.sh && nvm install 24 && nvm alias default 24"
 
+RUN curl https://raw.githubusercontent.com/riobard/bash-powerline/master/bash-powerline.sh > ~/.bash-powerline.sh && \
+  echo 'source ~/.bash-powerline.sh' >> ~/.bashrc
+
 CMD ["bash", "-c", "eval $(ssh-agent -s) && exec bash"]
