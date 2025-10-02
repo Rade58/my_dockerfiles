@@ -20,4 +20,6 @@ RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | b
 RUN curl https://raw.githubusercontent.com/riobard/bash-powerline/master/bash-powerline.sh > ~/.bash-powerline.sh && \
   echo 'source ~/.bash-powerline.sh' >> ~/.bashrc
 
+USER root
+
 CMD ["bash", "-c", "eval $(ssh-agent -s) && exec bash"]
